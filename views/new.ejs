@@ -1,0 +1,14 @@
+<% include ./partials/header %>
+<div class="container">
+    <h3 class="display-1">New post</h3>
+    <form action="/blog" method="POST" class="form-group">
+        <label>TITLE :</label>
+        <input type="text" name="post[title]" class="form-control"placeholder="Enter blog title" />
+        <label>IMAGE :</label>
+        <input type="text" name="post[img]" class="form-control" placeholder="Enter image URl" />
+        <label>POST :</label> 
+        <textarea name="post[body]" class="form-control " rows="10"></textarea></br>
+        <button class="form-control btn btn-outline-success">create post</button>
+    </form>
+</div>
+<% include ./partials/footer %>

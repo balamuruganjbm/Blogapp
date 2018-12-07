@@ -1,0 +1,14 @@
+<% include ./partials/header %>
+<div class="container">
+    <h3 class="display-1">Edit post <%=post.title%></h3>
+    <form action="/blog/<%=post._id%>?_method=PUT" method="POST" class="form-group">
+        <label>TITLE :</label>
+        <input class="form-control" type="text" name="post[title]" value=<%=post.title%> />
+        <label>IMAGE :</label>
+        <input class="form-control" type="text" name="post[img]" value=<%=post.img%> />
+        <label>POST :</label> 
+        <textarea class="form-control" name="post[body]" rows="10" ><%=post.body%></textarea>
+        <button class="form-control btn btn-outline-warning">update post</button>
+    </form>
+</div>
+<% include ./partials/footer %>

@@ -1,0 +1,16 @@
+<% include ./partials/header %>
+<div class="container">
+        <h1 class="display-1"><%=post.title%></h1>
+        <blockquote><%=post.createdtime.toDateString()%></blockquote>
+        <img src="<%=post.img%>"/><br/>
+        <p><%=post.body%></p><br/>
+        <div class="btn-group">
+            <a href="/blog/<%=post._id%>/edit" class="btn btn-warning">Edit post</a>
+        </div>
+        <div class="btn-group">
+            <form action="/blog/<%=post._id%>?_method=DELETE" method="POST">
+            <button class="btn btn-danger">DELETE</button>
+            </form>
+        </div>
+</div>
+<% include ./partials/footer %>
